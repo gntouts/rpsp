@@ -13,3 +13,8 @@ p.rules, h2.rules{
 #form{
     text-align: left;
 }
+
+.scores{
+    min-width: 50px;
+    min-height: 50px;
+}
