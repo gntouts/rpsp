@@ -107,5 +107,14 @@ function whoWins(playerChoice){
     return outcome;
 }
 
+function showRules(){
+        var f=document.getElementById("rules");
+        if(f.style.display == 'none')
+        f.style.display = 'block';
+        else
+        f.style.display = 'none';
+    
+}
+
 console.log(pcChoice());
 
