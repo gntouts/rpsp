@@ -92,19 +92,20 @@ function whoWins(playerChoice){
     if (x == y){
         outcome = "d";
         drawCounter = drawCounter + 1;
-        document.getElementById("draw-score").innerHTML = "Ισοπαλίες: " + drawCounter;
+        document.getElementById("draw-score").innerHTML = "<strong>Ισοπαλίες: " + drawCounter +"</strong>";
     }else if (((x == "r")&&(y == "s"))||((x == "r")&&(y == "pnc"))||((x == "s")&&(y == "pnc"))||((x == "s")&&(y == "ppr"))||((x == "pnc")&&(y == "ppr"))||((x == "ppr")&&(y == "r"))){
         outcome = "w";
         playerCounter = playerCounter +1;
         console.log(playerCounter);
-        document.getElementById("player-score").innerHTML = "Παίκτης: " + playerCounter;
+        document.getElementById("player-score").innerHTML = "<strong>Παίκτης: " + playerCounter +"</strong>";
     }else {
         outcome = "l";
         pcCounter = pcCounter + 1;
-        document.getElementById('pc-score').innerHTML = "PC: " + pcCounter;
+        document.getElementById('pc-score').innerHTML = "<strong>PC: " + pcCounter +"</strong>";
     }
     colorChange(outcome);
     return outcome;
 }
 
 console.log(pcChoice());
+
