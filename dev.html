@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/media/img/rpsp.ico" type="image/x-icon">
     <link rel="icon" href="/media/img/rpsp.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    
+    <script type="text/javascript" src="script.js"></script>
     <title>ΠΕΤΡΑ ΜΟΛΥΒΙ ΨΑΛΙΔΙ ΧΑΡΤΙ</title>
 </head>
 <body>
@@ -23,15 +23,15 @@
         <span id="initname">Χρήστης</span>
     </div>
     <div class="scoreboard"></div>
-    <div class="outcome" id="outcome">
-            <img class="user-move" src="./media/img/rock800.png" alt="">
-            <img class="pc-move" src="./media/img/rock800.png" alt="">
+    <div class="outcome" id="outcome" style="background-color:blue;">
+            <img id="user-move" class="user-move" src="./media/img/blank.png" alt="">
+            <img id="pc-move" class="pc-move" src="./media/img/blank.png" alt="">
     </div>
     <div class="buttons">
-        <img class="button" src="./media/img/rock800.png" alt="">
-        <img class="button" src="./media/img/pencil800.png" alt="">
-        <img class="button" src="./media/img/scissors800.png" alt="">
-        <img class="button" src="./media/img/paper800.png" alt="">
+        <input class="button" onclick="whoWins('r')" type="image" src="./media/img/rock800.png" />
+        <input class="button" onclick="whoWins('s')" type="image" src="./media/img/pencil800.png" />
+        <input class="button" onclick="whoWins('pnc')" type="image" src="./media/img/scissors800.png" />
+        <input class="button" onclick="whoWins('ppr')" type="image" src="./media/img/paper800.png" />
     </div>
     <div class="ruleset"> 
         <h2 class="rules">Κανόνες</h2>
@@ -56,7 +56,8 @@
         <input type="text" name="pc-score" id="pc" class="scores">
         
     </div>
-    <button onclick="myFunction()">Try it</button>
+    <button onclick="javascript:myFunction('red')">Try it</button>
+    
 </body>
-<script src="script.js"></script>
+
 </html>

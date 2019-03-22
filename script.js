@@ -5,40 +5,90 @@ function changeText(element) {
     document.getElementById('initname').innerHTML = element.value;
 }
 
-document.body.style.backgroundColor = "green";
-
 function colorChange(result) {
     switch(result){
         case "w":
-        let color = "green";
+        color = "green";
         break;
         case "l":
-        let color = "red";
+        color = "red";
         break;
         case "d":
-        let color = "white";
+        color = "white";
         break;
     }
-    document.body.style.backgroundColor = color;
+    document.getElementById('outcome').style.backgroundColor = color;
   }
 
-  function myFunction() {
-    document.getElementById("outcome").style.backgroundColor = "lightblue"; 
+  function myFunction(x) {
+    document.getElementById('outcome').style.backgroundColor = x; 
+  }
 
 function pcChoice(){
     let choice = "";
     let x = Math.random();
     x *= 14;
     if (x <= 3){
-        choice = "rock";
+        choice = "r";
     }else if (x <= 7){
-        choice = "scissors";
+        choice = "s";
     }else if (x <=10){
-        choice = "paper";
+        choice = "ppr";
     }else {
-        choice = "pencil";
+        choice = "pnc";
     }
         return  choice;
 }
 
+function playerChoice(input){
+    return input;
+}
+
+function changeIcons(player, pc){
+    switch(player){
+        case "r":
+        document.getElementById("user-move").src="./media/img/rock800.png";
+        break;
+        case "s":
+        document.getElementById("user-move").src="./media/img/scissors800.png";
+        break;
+        case "ppr":
+        document.getElementById("user-move").src="./media/img/paper800.png";
+        break;
+        case "pnc":
+        document.getElementById("user-move").src="./media/img/pencil800.png";
+        break;
+    }
+    switch(pc){
+        case "r":
+        document.getElementById("pc-move").src="./media/img/rock800.png";
+        break;
+        case "s":
+        document.getElementById("pc-move").src="./media/img/scissors800.png";
+        break;
+        case "ppr":
+        document.getElementById("pc-move").src="./media/img/paper800.png";
+        break;
+        case "pnc":
+        document.getElementById("pc-move").src="./media/img/pencil800.png";
+        break;
+    }
+}
+
+function whoWins(playerChoice){
+    x = playerChoice;
+    y = pcChoice();
+    changeIcons(x,y);
+    if (x == y){
+        outcome = "d";
+    }else if (((x == "r")&&(y == "s"))||((x == "r")&&(y == "pnc"))||((x == "s")&&(y == "pnc"))||((x == "s")&&(y == "ppr"))||((x == "pnc")&&(y == "ppr"))||((x == "ppr")&&(y == "r"))){
+        outcome = "w";
+    }else {
+        outcome = "l";
+    }
+    colorChange(outcome);
+    return outcome;
+}
+
 console.log(pcChoice());
+
