@@ -1,3 +1,10 @@
+
+var pcCounter = 0;
+var playerCounter = 0;
+var drawCounter = 0;
+pcCounter++;
+console.log(pcCounter);
+
 var userName = document.getElementById("username").value;
 document.getElementById("output").textContent = userName;
 
@@ -84,14 +91,20 @@ function whoWins(playerChoice){
     changeIcons(x,y);
     if (x == y){
         outcome = "d";
+        drawCounter = drawCounter + 1;
+        document.getElementById("draw-score").innerHTML = "Ισοπαλίες: " + drawCounter;
     }else if (((x == "r")&&(y == "s"))||((x == "r")&&(y == "pnc"))||((x == "s")&&(y == "pnc"))||((x == "s")&&(y == "ppr"))||((x == "pnc")&&(y == "ppr"))||((x == "ppr")&&(y == "r"))){
         outcome = "w";
+        playerCounter = playerCounter +1;
+        console.log(playerCounter);
+        document.getElementById("player-score").innerHTML = "Παίκτης: " + playerCounter;
     }else {
         outcome = "l";
+        pcCounter = pcCounter + 1;
+        document.getElementById('pc-score').innerHTML = "PC: " + pcCounter;
     }
     colorChange(outcome);
     return outcome;
 }
 
 console.log(pcChoice());
-

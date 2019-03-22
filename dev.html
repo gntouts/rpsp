@@ -32,8 +32,8 @@
     </div>
     <div class="buttons">
         <input class="button" onclick="whoWins('r')" type="image" src="./media/img/rock800.png" />
-        <input class="button" onclick="whoWins('s')" type="image" src="./media/img/pencil800.png" />
-        <input class="button" onclick="whoWins('pnc')" type="image" src="./media/img/scissors800.png" />
+        <input class="button" onclick="whoWins('s')" type="image" src="./media/img/scissors800.png" />
+        <input class="button" onclick="whoWins('pnc')" type="image" src="./media/img/pencil800.png" />
         <input class="button" onclick="whoWins('ppr')" type="image" src="./media/img/paper800.png" />
     </div>
     <div class="ruleset"> 
@@ -52,15 +52,19 @@
         </p>
     </div>
     <div class="scores">
-        <label for="player">Player</label>
-        <label for="pc">PC</label><br>
-        <input type="text" name="player-score" id="player" class="scores">
-        <span>:</span>
-        <input type="text" name="pc-score" id="pc" class="scores">
+        <button type="button" name="player-score" id="player-score" class="scores" disabled>
+            Παίκτης: 0
+        </button>
+        <button type="button" name="pc-score" id="pc-score" class="scores" disabled>
+            PC: 0
+        </button>
+        <br>
+        <button type="button" name="draw-score" id="draw-score" class="scores" disabled>
+                Ισοπαλίες: 0
+            </button>
         
     </div>
-    <button onclick="javascript:myFunction('red')">Try it</button>
-    
+        
 </body>
 
 </html>
