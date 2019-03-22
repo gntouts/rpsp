@@ -4,7 +4,7 @@
 }
 
 input.button{
-    max-width: 20%;
+    max-width: 10%;
 }
 
 p.rules, h2.rules{
@@ -13,8 +13,8 @@ p.rules, h2.rules{
 #form{
     text-align: left;
 }
-.user-move, .pc-move {
-    max-width: 20%;
+.move {
+    max-width: 15%;
 }
 .scores{
     min-width: 50px;

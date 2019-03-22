@@ -9,12 +9,15 @@ function colorChange(result) {
     switch(result){
         case "w":
         color = "green";
+        document.getElementById('res').innerHTML = "<strong>Νίκη</strong>"
         break;
         case "l":
         color = "red";
+        document.getElementById('res').innerHTML = "<strong>Ήττα</strong>"
         break;
         case "d":
         color = "white";
+        document.getElementById('res').innerHTML = "<strong>Ισοπαλία</strong>"
         break;
     }
     document.getElementById('outcome').style.backgroundColor = color;
