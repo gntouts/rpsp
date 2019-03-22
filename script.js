@@ -5,6 +5,26 @@ function changeText(element) {
     document.getElementById('initname').innerHTML = element.value;
 }
 
+document.body.style.backgroundColor = "green";
+
+function colorChange(result) {
+    switch(result){
+        case "w":
+        let color = "green";
+        break;
+        case "l":
+        let color = "red";
+        break;
+        case "d":
+        let color = "white";
+        break;
+    }
+    document.body.style.backgroundColor = color;
+  }
+
+  function myFunction() {
+    document.getElementById("outcome").style.backgroundColor = "lightblue"; 
+
 function pcChoice(){
     let choice = "";
     let x = Math.random();
