@@ -24,12 +24,12 @@ p.rules, h2.rules{
 #form{
     text-align: left;
 }
-button.ruleset{
+/* button.rules{
     font: inherit;
     padding: 0;
     border: none;
     background: none;
-}
+} */
 button.scores {
     color: black;
 }

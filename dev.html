@@ -22,23 +22,20 @@
         <p>Εμφανίζεται το όνομα χρήστη: </p>
         <span id="initname">Χρήστης</span>
     </div> -->
-
+    <div class="scoreboard"></div>
+    <div class="outcome" id="outcome" style="background-color:white;">
+        <p id="res"><strong>Αποτέλεσμα</strong></p>
+            <span>Your move</span>
+            <img id="user-move" class="move" src="./media/img/blank.png" alt="">
+            <img id="pc-move" class="move" src="./media/img/blank.png" alt="">
+            <span>PC move</span>
+    </div>
     <div class="buttons">
         <input class="button" onclick="whoWins('r')" type="image" src="./media/img/rock800.png" />
         <input class="button" onclick="whoWins('s')" type="image" src="./media/img/scissors800.png" />
         <input class="button" onclick="whoWins('pnc')" type="image" src="./media/img/pencil800.png" />
         <input class="button" onclick="whoWins('ppr')" type="image" src="./media/img/paper800.png" />
     </div>
-    
-    <div class="scoreboard"></div>
-        <div class="outcome" id="outcome" style="background-color:white;">
-            <p id="res"><strong>Αποτέλεσμα</strong></p>
-            <span>Your move</span>
-            <img id="user-move" class="move" src="./media/img/blank.png" alt="">
-            <img id="pc-move" class="move" src="./media/img/blank.png" alt="">
-            <span>PC move</span>
-        </div>
-        
     <div class="scores">
             <button type="button" name="player-score" id="player-score" class="scores" disabled>
                <strong>Παίκτης: 0</strong>
@@ -52,15 +49,23 @@
                 </button>
             
         </div>
+    <div class="ruleset"> 
+        <button class="rules" onclick="showRules()">Κανόνες</button>
+        <div id="rules">
+        <p class="rules">
+            Η Πέτρα σπάει το Μολύβι και το Ψαλίδι.
+        </p>
+        <p class="rules">
+            Το Ψαλίδι κόβει το Χαρτί και το Μολύβι.
+        </p>
+        <p class="rules">
+            Το Χαρτί τυλίγει την Πέτρα.
+        </p>
+        <p class="rules">
+            Το Μολύβι γράφει το Χαρτί.
+        </p>
     </div>
-    <button type"button" class="ruleset" onclick="showRules()">Κανόνες</button>
-    <div id="rules" style="display:none;"> 
-        <p>Η Πέτρα σπάει το Μολύβι και το Ψαλίδι.</p>
-        <p>Το Ψαλίδι κόβει το Χαρτί και το Μολύβι.</p>
-        <p>Το Χαρτί τυλίγει την Πέτρα.</p>
-        <p>Το Μολύβι γράφει το Χαρτί.</p>
-    </div>
-            
+</div>   
 </body>
 
 </html>
