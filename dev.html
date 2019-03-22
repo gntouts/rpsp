@@ -14,16 +14,16 @@
     <header>
         <h1>Πέτρα Μολύβι Ψαλίδι Χαρτί</h1>
     </header>
-    <div>
+    <!-- <div>
         
             <label for="form">Όνομα Χρήστη: </label>
             <input type="text" onkeyup="changeText(this)" name="username" placeholder="Χρήστης" id="form" class="input-txt" />
         
         <p>Εμφανίζεται το όνομα χρήστη: </p>
         <span id="initname">Χρήστης</span>
-    </div>
+    </div> -->
     <div class="scoreboard"></div>
-    <div class="outcome" id="outcome" style="background-color:blue;">
+    <div class="outcome" id="outcome" style="background-color:white;">
         <p id="res"><strong>Αποτέλεσμα</strong></p>
             <span>Your move</span>
             <img id="user-move" class="move" src="./media/img/blank.png" alt="">
@@ -36,6 +36,19 @@
         <input class="button" onclick="whoWins('pnc')" type="image" src="./media/img/pencil800.png" />
         <input class="button" onclick="whoWins('ppr')" type="image" src="./media/img/paper800.png" />
     </div>
+    <div class="scores">
+            <button type="button" name="player-score" id="player-score" class="scores" disabled>
+                Παίκτης: 0
+            </button>
+            <button type="button" name="pc-score" id="pc-score" class="scores" disabled>
+                PC: 0
+            </button>
+            <br>
+            <button type="button" name="draw-score" id="draw-score" class="scores" disabled>
+                    Ισοπαλίες: 0
+                </button>
+            
+        </div>
     <div class="ruleset"> 
         <h2 class="rules">Κανόνες</h2>
         <p class="rules">
@@ -51,20 +64,7 @@
             Το Μολύβι γράφει το Χαρτί.
         </p>
     </div>
-    <div class="scores">
-        <button type="button" name="player-score" id="player-score" class="scores" disabled>
-            Παίκτης: 0
-        </button>
-        <button type="button" name="pc-score" id="pc-score" class="scores" disabled>
-            PC: 0
-        </button>
-        <br>
-        <button type="button" name="draw-score" id="draw-score" class="scores" disabled>
-                Ισοπαλίες: 0
-            </button>
-        
-    </div>
-        
+            
 </body>
 
 </html>
