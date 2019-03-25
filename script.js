@@ -119,13 +119,12 @@ function whoWins(playerChoice){
 }
 
 function showRules(){
-        let f=document.getElementById("rules");
+        f=document.getElementById("rules");
         if(f.style.display == 'none')
         f.style.display = 'block';
         else
         f.style.display = 'none';
-    
-}
+    }
 
 console.log(pcChoice());
 
