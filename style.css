@@ -49,3 +49,7 @@ div.outcome{
 p.continue{
     display: none;
 }
+
+div#rules{
+    display: none;
+}
