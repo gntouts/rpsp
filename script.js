@@ -12,6 +12,15 @@ function changeText(element) {
     document.getElementById('initname').innerHTML = element.value;
 }
 
+function showResults(){
+    document.getElementById("outcome").style.display = 'block';
+}
+
+function changeMessage(){
+    document.getElementById("start").style.display = 'none';
+    document.getElementById("continue").style.display = 'block';
+}
+
 function colorChange(result) {
     switch(result){
         case "w":
@@ -104,11 +113,13 @@ function whoWins(playerChoice){
         document.getElementById('pc-score').innerHTML = "<strong>PC: " + pcCounter +"</strong>";
     }
     colorChange(outcome);
+    showResults();
+    changeMessage();
     return outcome;
 }
 
 function showRules(){
-        var f=document.getElementById("rules");
+        let f=document.getElementById("rules");
         if(f.style.display == 'none')
         f.style.display = 'block';
         else

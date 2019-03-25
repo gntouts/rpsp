@@ -24,12 +24,13 @@ p.rules, h2.rules{
 #form{
     text-align: left;
 }
-/* button.rules{
+button.rules{
     font: inherit;
     padding: 0;
     border: none;
     background: none;
-} */
+    color: black;
+}
 button.scores {
     color: black;
 }
@@ -39,4 +40,12 @@ button.scores {
 .scores{
     min-width: 50px;
     min-height: 50px;
+}
+
+div.outcome{
+    display: none;
+}
+
+p.continue{
+    display: none;
 }
