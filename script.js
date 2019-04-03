@@ -2,7 +2,7 @@
 var pcCounter = 0;
 var playerCounter = 0;
 var drawCounter = 0;
-pcCounter++;
+
 console.log(pcCounter);
 
 var userName = document.getElementById("username").value;
@@ -120,7 +120,7 @@ function whoWins(playerChoice){
 
 function showRules(){
         f=document.getElementById("rules");
-        if(f.style.display == 'none')
+        if(f.style.display === 'none')
         f.style.display = 'block';
         else
         f.style.display = 'none';
