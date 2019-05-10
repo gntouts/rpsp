@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="formstyle.css">
+
+</head>
+<body>
+    <h1>Αίτηση Έκδοσης Πιστοποιητικού</h1>
+    <hr>
+    <h3>Στοιχεία Φοιτητή</h3>
+    <p>Συμπληρώστε τα στοιχεία σας με ελληνικούς χαρακτήρες</p>
+    <form action="form.php" method="post">
+        <div>
+        <label for="name">Ονοματεπώνυμο</label><br>
+        <input type="text" name="name" id="name" placeholder="Όνομα">
+        <input type="text" name="surname" id="surname" placeholder="Επώνυμο"><br>
+        </div>
+        
+        <label for="adress">Στοιχεία Διεύθυνσης</label><br>
+            <input type="text" class="adress"  name="adress" id="adress" placeholder="Οδός και αριθμός"><br>
+            
+                <input type="text" name="town" id="town" placeholder="Πόλη">
+            
+           
+                <input type="text" name="postal" id="postal" placeholder="Ταχυδρομικός Κώδικας"><br>
+             
+            <div>
+        <label for="phone">Στοιχεία Επικοινωνίας</label><br>
+        <input type="text" class="left" name="phone" id="phone" placeholder="Τηλέφωνο">
+        <input type="text" name="email" id="email" placeholder="Διεύθυνση E-mail"><br>
+        </div>
+        <div class="left">
+        <label for="year">Έτος Σπουδών</label><br>
+        <input type="radio" name="year" value="A"> Α
+        <input type="radio" name="year" value="B"> Β
+        <input type="radio" name="year" value="C">Γ
+        <input type="radio" name="year" value="D"> Δ
+        <input type="radio" name="year" value="E"> Ε
+        <input type="radio" name="year" value="E+"> Ε+
+        <input type="radio" name="year" value="MF"> ΜΦ
+    </div>
+        <div><label for="am">Αριθμός Μητρώου</label><br>
+            <input type="text" name="am" id="am"><br>
+        </div>
+        <hr>
+    
+        <h3>Πιστοποιητικό</h3>
+        
+        <label for="doc"><strong>Είδος Πιστοποιητικού</strong></label><br>
+
+
+        <select id="doc" name="doc">
+            <option value="2">Φωτοτυπία Καρτέλας</option>
+            <option value="1">Πιστοποιητικό Ενεργού Φοιτητή</option>
+           <option value="3">Πιστοποιητικό Σπουδών</option>
+            </select>
+            <label for="receive">Τρόπος παραλαβής Πιστοποιητικού</label><br>
+            <input type="radio" name="receive" value="Grammateia" placeholder="Α"> Παραλαβή από την γραμματεία<br>
+            <input type="radio" name="receive" value="Apostoli" placeholder="Β"> Αποστολή στην διεύθυνση κατοικίας
+            <label for="date">Ημερομηνία παραλαβής</label><br>
+            <input type="month" name="date" id="date"><br>
+            
+            <input type="submit" value="Υποβολή">
+    </form>
+
+</body>
+</html>
+
